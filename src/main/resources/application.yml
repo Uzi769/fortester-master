@@ -1,0 +1,28 @@
+server:
+  port: ${APP_PORT:8091}
+#  address: 192.168.88.34
+
+spring:
+  datasource:
+    username: ${POSTGRES_USERNAME:postgres}
+    password: ${POSTGRES_PASSWORD:karaf}
+    url: ${POSTGRES_URL:jdbc:postgresql://localhost:5432/test}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    hibernate.ddl-auto: validate
+
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+    enabled: true
+
+
+##Swagger
+#springdoc:
+#  api-docs:
+#    path: /open-api-docs
+#  swagger-ui:
+#    path: /swagger
+#    tags-sorter: alpha
+#    operations-sorter: method

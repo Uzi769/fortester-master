@@ -1,0 +1,98 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <changeSet author="Gelnaz" id="21062021-5">
+        <insert tableName="teacher">
+            <column name="full_name" value="Иванов Иван Иванович"/>
+            <column name="academic_subject" value="Математика"/>
+            <column name="experience" value="2 года 10 месяцев"/>
+            <column name="date" value="2019-09-01"/>
+        </insert>
+        <insert tableName="teacher">
+            <column name="full_name" value="Иванова Мария Ивановна"/>
+            <column name="academic_subject" value="Русский язык"/>
+            <column name="experience" value="3 года 10 месяцев"/>
+            <column name="date" value="2018-09-01"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="Gelnaz" id="21062021-6">
+        <insert tableName="student">
+            <column name="full_name" value="Максимов Иван Иванович"/>
+            <column name="grade" value="5А"/>
+        </insert>
+        <insert tableName="student">
+            <column name="full_name" value="Семенова Анна Ивановна"/>
+            <column name="grade" value="5А"/>
+        </insert>
+        <insert tableName="student">
+            <column name="full_name" value="Степанова Анна Михайлонв"/>
+            <column name="grade" value="7А"/>
+        </insert>
+    </changeSet>
+
+
+    <changeSet author="Gelnaz" id="21062021-7">
+        <insert tableName="teacher_student">
+            <column name="teacher_id" value="1"/>
+            <column name="student_id" value="1"/>
+        </insert>
+        <insert tableName="teacher_student">
+            <column name="teacher_id" value="1"/>
+            <column name="student_id" value="2"/>
+        </insert>
+        <insert tableName="teacher_student">
+            <column name="teacher_id" value="1"/>
+            <column name="student_id" value="3"/>
+        </insert>
+        <insert tableName="teacher_student">
+            <column name="teacher_id" value="2"/>
+            <column name="student_id" value="1"/>
+        </insert>
+        <insert tableName="teacher_student">
+            <column name="teacher_id" value="2"/>
+            <column name="student_id" value="2"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="Gelnaz" id="21062021-8">
+        <insert tableName="journal">
+            <column name="rating" value="5"/>
+            <column name="academic_subject" value="Математика"/>
+            <column name="student_id" value="1"/>
+        </insert>
+        <insert tableName="journal">
+            <column name="rating" value="4"/>
+            <column name="academic_subject" value="Математика"/>
+            <column name="student_id" value="2"/>
+        </insert>
+        <insert tableName="journal">
+            <column name="rating" value="5"/>
+            <column name="academic_subject" value="Математика"/>
+            <column name="student_id" value="3"/>
+        </insert>
+        <insert tableName="journal">
+            <column name="rating" value="5"/>
+            <column name="academic_subject" value="Русский язык"/>
+            <column name="student_id" value="1"/>
+        </insert>
+        <insert tableName="journal">
+            <column name="rating" value="3"/>
+            <column name="academic_subject" value="Русский язык"/>
+            <column name="student_id" value="1"/>
+        </insert>
+        <insert tableName="journal">
+            <column name="rating" value="5"/>
+            <column name="academic_subject" value="Русский язык"/>
+            <column name="student_id" value="2"/>
+        </insert>
+        <insert tableName="journal">
+            <column name="rating" value="2"/>
+            <column name="academic_subject" value="Русский язык"/>
+            <column name="student_id" value="2"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
+
+
